@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace ElectricLights
 {
-    public class ModuleColorChangerConsumer : ModuleColorChanger, IModuleInfo
+    class ModuleAnimateGenericConsumer : ModuleAnimateGeneric, IModuleInfo
     {
         const float resourceRate = 1.0F;
         const string resourceType = "ElectricCharge";
@@ -11,15 +11,31 @@ namespace ElectricLights
         [KSPField]
         public double resourceAmount = 0.02;
 
+        bool shutdown = false;
+
         public override void OnUpdate()
         {
             if (HighLogic.LoadedSceneIsFlight)
+            {
+                double ecRequested = resourceAmount * resourceRate * TimeWarp.deltaTime;
+                if (!shutdown && Progress != 0)
                 {
-                if (animState)
-                {
-                    if (part.RequestResource(resourceType, resourceAmount * resourceRate * TimeWarp.deltaTime) <= 0)
+                    if (part.RequestResource(resourceType, ecRequested) <= 0)
                     {
-                        SetState(false);
+                        Toggle();
+                        shutdown = true;
+                    }
+                }
+                else if (shutdown)
+                {
+                    if (part.RequestResource(resourceType, ecRequested) >= ecRequested)
+                    {
+                        Toggle();
+                        shutdown = false;
+                    }
+                    else if (Progress != 0 && !IsMoving())
+                    {
+                        Toggle();
                     }
                 }
             }
