@@ -1,5 +1,6 @@
 ﻿using System.Text;
 using UnityEngine;
+using KSP.Localization;
 
 namespace ElectricLights
 {
@@ -45,14 +46,16 @@ namespace ElectricLights
         public override string GetInfo()
         {
             StringBuilder info = new StringBuilder();
-            info.AppendLine("<color=#FF8C00>Requires:</color>");
-            info.Append("-Electric Charge: ").Append(resourceRate * 60 * resourceAmount).AppendLine("/min");
+            info.AppendLine("<color=#FF8C00><b><<1>></b></color>").Replace("<<1>>", Localizer.GetStringByTag("#autoLOC_244332"));
+            info.Append(Localizer.GetStringByTag("#autoLOC_244201"));
+            info.Replace("<<1>>", Localizer.GetStringByTag("#autoLOC_501004"));
+            info.Replace("<<2>>", (resourceRate * 60 * resourceAmount).ToString());
             return info.ToString();
         }
 
         public string GetModuleTitle()
         {
-            return "Light";
+            return "#autoLOC_6003003";
         }
 
         public string GetPrimaryField()
