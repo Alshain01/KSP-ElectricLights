@@ -45,7 +45,7 @@ namespace ElectricLights
 
         public override string GetInfo()
         {
-            StringBuilder info = new StringBuilder();
+            StringBuilder info = new StringBuilder(base.GetInfo());
             info.AppendLine("<color=#FF8C00><b><<1>></b></color>").Replace("<<1>>", Localizer.GetStringByTag("#autoLOC_244332"));
             info.Append(Localizer.GetStringByTag("#autoLOC_244201"));
             info.Replace("<<1>>", Localizer.GetStringByTag("#autoLOC_501004"));
