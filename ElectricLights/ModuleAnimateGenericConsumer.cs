@@ -58,6 +58,11 @@ namespace ElectricLights
             return "#autoLOC_6003003";
         }
 
+        public override string GetModuleDisplayName()
+        {
+            return GetModuleTitle();
+        }
+
         public string GetPrimaryField()
         {
             return null;

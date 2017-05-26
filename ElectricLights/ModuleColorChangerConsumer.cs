@@ -4,7 +4,7 @@ using KSP.Localization;
 
 namespace ElectricLights
 {
-    public class ModuleColorChangerConsumer : ModuleColorChanger, IModuleInfo
+    class ModuleColorChangerConsumer : ModuleColorChanger, IModuleInfo
     {
         const float resourceRate = 1.0F;
         const string resourceType = "ElectricCharge";
@@ -40,6 +40,11 @@ namespace ElectricLights
         public string GetModuleTitle()
         {
             return "#autoLOC_6003003";
+        }
+
+        public override string GetModuleDisplayName()
+        {
+            return GetModuleTitle();
         }
 
         public string GetPrimaryField()
