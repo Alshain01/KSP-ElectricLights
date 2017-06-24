@@ -1,5 +1,4 @@
-# KSP-ElectricLights
-Electric Lights
+# Electric Lights
 
 Electric Lights is a realism mod for Kerbal Space Program that makes cabin lights require a small electric charge when turned on. 
 
