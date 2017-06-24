@@ -1,0 +1,37 @@
+﻿{
+    "NAME":"Electric Lights",
+    "URL":"http://ksp-avc.cybutek.net/version.php?id=494",
+    "DOWNLOAD": "https://www.spacedock.info/mod/1022/Electric%20Lights",
+    "CHANGELOG": "https://raw.githubusercontent.com/Alshain01/KSP-ElectricLights/master/ElectricLights/Changelog.txt",
+    "GITHUB":
+    {
+        "USERNAME":"Alshain01",
+        "REPOSITORY":"KSP-ElectricLights",
+        "ALLOW_PRE_RELEASE":false
+    },
+    "VERSION":
+    {
+        "MAJOR":1,
+        "MINOR":0,
+        "PATCH":4,
+        "BUILD":0
+    },
+    "KSP_VERSION":
+    {
+        "MAJOR":1,
+        "MINOR":3,
+        "PATCH":0
+    },
+    "KSP_VERSION_MIN":
+    {
+        "MAJOR":1,
+        "MINOR":2,
+        "PATCH":0
+    },
+    "KSP_VERSION_MAX":
+    {
+        "MAJOR":1,
+        "MINOR":3,
+        "PATCH":99
+    }
+} 

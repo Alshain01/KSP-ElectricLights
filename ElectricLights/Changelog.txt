@@ -1,0 +1,16 @@
+﻿v1.0.4 - June 23, 2017
+* Code optimization
+* Change license to MIT
+
+v1.0.3 - May 27, 2017
+* Add localization (stock dictionary only)
+
+v1.0.2 - October 29, 2016
+* Cockpits now use a custom extension of ModuleAnimateGeneric
+* Add Electric requirements to part statistics window in the editor
+
+v1.0.1 - October 27, 2016
+* Fix Mk1 Command Pod
+* Update Flags
+
+v1.0.0 - October 26, 2016
